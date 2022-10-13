@@ -1,0 +1,11 @@
+sort1 uses: Bubble
+
+How do you know?: It's performance in the random and reversed tests were the worst and it only got poorer when the total of numbers increased. Bubble sort tends to take longer in situations that do not favor it on account of the number of swaps, principally when the quantity of elements is high. Not only that but "sort1" was efficient in the sorted tests, what is congruent with bubble sort's lower bound.
+
+sort2 uses: Merge
+
+How do you know?: How do you know?: It was the fastest in almost every test and showed an increasing difference to the other two in the inverted and random test as the numbers increased. This corresponds to the merge sort, as it is faster in almost all situations and also because of the proximity of the numbers of sort1 in the different tests, which equates to the higher and lower bound of merge being the same.
+
+sort3 uses: Selection
+
+How do you know?: "sort3" was faster than "sort1" in the random and the reversed test which is the worst case for bubble sort, however it was worse in the sorted test and that is the best case for bubble. It also was worst than "sort2" in every test cause selection is slower than merge.
