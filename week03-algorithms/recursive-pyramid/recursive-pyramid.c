@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
     draw(height);
 }
 
-// Even Pyramid
+// Comment one of the below functions
+// Even Pyramid 
 void draw (int height)
 { 
     if (height == 0)
