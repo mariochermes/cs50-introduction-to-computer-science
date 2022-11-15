@@ -1,3 +1,4 @@
+#include <math.h>
 #include <cs50.h>
 #include <string.h>
 #include <stdio.h>
@@ -149,8 +150,19 @@ void add_pairs(void)
     return;
 }
 
-// Sort pairs in decreasing order by strength of victory using selection sort
-void sort_pairs(void)
+void merge_sort(int l, int h)
+{
+    // Base case
+    if (l < h)
+    {
+        int mid = round((l + h) / 2.0);
+
+        merge_sort(l, mid);
+        merge_sort(mid + 1, h);
+    }
+}
+
+void selection_sort(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
@@ -168,6 +180,12 @@ void sort_pairs(void)
         pairs[max_index] = pairs[i];
         pairs[i] = aux;
     }
+    return;
+}
+
+// Sort pairs in decreasing order by strength of victory
+void sort_pairs(void)
+{
     return;
 }
 
