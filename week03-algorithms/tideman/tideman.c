@@ -150,18 +150,6 @@ void add_pairs(void)
     return;
 }
 
-void merge_sort(int l, int h)
-{
-    // Base case
-    if (l < h)
-    {
-        int mid = round((l + h) / 2.0);
-
-        merge_sort(l, mid);
-        merge_sort(mid + 1, h);
-    }
-}
-
 void selection_sort(void)
 {
     for (int i = 0; i < pair_count; i++)
@@ -183,9 +171,81 @@ void selection_sort(void)
     return;
 }
 
+// void merge(int start, int mid, int end)
+// {
+//     int i = start, j = mid, k = 0;
+//     while (i <= mid && j <= end)
+//     {
+//         if (preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner] < preferences[pairs[mid].winner][pairs[mid].loser] - preferences[pairs[mid].loser][pairs[mid].winner])
+//         {
+//             pairs[k].winner = preferences[pairs[i].winner][pairs[i].loser];
+//             pairs[k].loser = preferences[pairs[i].loser][pairs[i].winner];
+//             k++, i++;
+//         }
+//         else
+//         {
+//             pairs[k].winner = preferences[pairs[mid].winner][pairs[mid].loser];
+//             pairs[k].loser = preferences[pairs[mid].loser][pairs[mid].winner];
+//             k++, j++;
+//         }
+
+//         for (; i <= mid; i++, k++)
+//         {
+//             pairs[k].winner = preferences[pairs[i].winner][pairs[i].loser];
+//             pairs[k].loser = preferences[pairs[i].loser][pairs[i].winner];
+//         }
+//         for (; j <= end; j++, k++)
+//         {
+//             pairs[k].winner = preferences[pairs[mid].winner][pairs[mid].loser];
+//             pairs[k].loser = preferences[pairs[mid].loser][pairs[mid].winner];
+//         }
+//     }
+// }
+
+void merge_sort(int start, int end, int *counter)
+{
+    if (start < end)
+    {
+        int mid = (start + end) / 2;
+
+        merge_sort(start, mid, counter);
+        merge_sort(mid + 1, end, counter);
+
+        int i = start, j = end, k = *counter;
+        while (i <= mid && j <= end)
+        {
+            if (preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner] < preferences[pairs[mid].winner][pairs[mid].loser] - preferences[pairs[mid].loser][pairs[mid].winner])
+            {
+                pairs[k].winner = preferences[pairs[i].winner][pairs[i].loser];
+                pairs[k].loser = preferences[pairs[i].loser][pairs[i].winner];
+                k++, i++;
+            }
+            else
+            {
+                pairs[k].winner = preferences[pairs[mid].winner][pairs[mid].loser];
+                pairs[k].loser = preferences[pairs[mid].loser][pairs[mid].winner];
+                k++, j++;
+            }
+
+            for (; i <= mid; i++, k++)
+            {
+                pairs[k].winner = preferences[pairs[i].winner][pairs[i].loser];
+                pairs[k].loser = preferences[pairs[i].loser][pairs[i].winner];
+            }
+            for (; j <= end; j++, k++)
+            {
+                pairs[k].winner = preferences[pairs[mid].winner][pairs[mid].loser];
+                pairs[k].loser = preferences[pairs[mid].loser][pairs[mid].winner];
+            }
+        }
+    }
+}
+
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
+    int *counter = malloc(sizeof(int));
+    merge_sort(1, pair_count, counter);
     return;
 }
 
