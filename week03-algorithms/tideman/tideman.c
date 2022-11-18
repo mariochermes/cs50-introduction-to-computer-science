@@ -1,6 +1,7 @@
 #include <math.h>
 #include <cs50.h>
 #include <string.h>
+#include <stdlib.h>
 #include <stdio.h>
 
 // Max number of candidates
@@ -31,6 +32,7 @@ int candidate_count;
 bool vote(int rank, string name, int ranks[]);
 void record_preferences(int ranks[]);
 void add_pairs(void);
+void merge_sort(int start, int end, pair *temp);
 void sort_pairs(void);
 bool has_cycle(int start, int end);
 void lock_pairs(void);
@@ -150,102 +152,82 @@ void add_pairs(void)
     return;
 }
 
-void selection_sort(void)
-{
-    for (int i = 0; i < pair_count; i++)
-    {
-        int max_index = i;
-        int highest_margin = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
-        for (int j = i + 1; j < pair_count; j++)
-        {
-            if (preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner] >= highest_margin)
-            {
-                highest_margin = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
-                max_index = j;
-            }
-        }
-        pair aux = pairs[max_index];
-        pairs[max_index] = pairs[i];
-        pairs[i] = aux;
-    }
-    return;
-}
-
-// void merge(int start, int mid, int end)
+// Selection sort
+// void selection_sort(void)
 // {
-//     int i = start, j = mid, k = 0;
-//     while (i <= mid && j <= end)
+//     for (int i = 0; i < pair_count; i++)
 //     {
-//         if (preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner] < preferences[pairs[mid].winner][pairs[mid].loser] - preferences[pairs[mid].loser][pairs[mid].winner])
+//         int max_index = i;
+//         int highest_margin = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
+//         for (int j = i + 1; j < pair_count; j++)
 //         {
-//             pairs[k].winner = preferences[pairs[i].winner][pairs[i].loser];
-//             pairs[k].loser = preferences[pairs[i].loser][pairs[i].winner];
-//             k++, i++;
+//             if (preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner] >= highest_margin)
+//             {
+//                 highest_margin = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
+//                 max_index = j;
+//             }
 //         }
-//         else
-//         {
-//             pairs[k].winner = preferences[pairs[mid].winner][pairs[mid].loser];
-//             pairs[k].loser = preferences[pairs[mid].loser][pairs[mid].winner];
-//             k++, j++;
-//         }
-
-//         for (; i <= mid; i++, k++)
-//         {
-//             pairs[k].winner = preferences[pairs[i].winner][pairs[i].loser];
-//             pairs[k].loser = preferences[pairs[i].loser][pairs[i].winner];
-//         }
-//         for (; j <= end; j++, k++)
-//         {
-//             pairs[k].winner = preferences[pairs[mid].winner][pairs[mid].loser];
-//             pairs[k].loser = preferences[pairs[mid].loser][pairs[mid].winner];
-//         }
+//         pair aux = pairs[max_index];
+//         pairs[max_index] = pairs[i];
+//         pairs[i] = aux;
 //     }
+//     return;
 // }
 
-void merge_sort(int start, int end, int *counter)
+// Merge sort
+void merge_sort(int start, int end, pair temp[])
 {
+    // If the end is higher than the start it means there are at least 2 pairs on the current array
     if (start < end)
     {
         int mid = (start + end) / 2;
 
-        merge_sort(start, mid, counter);
-        merge_sort(mid + 1, end, counter);
+        merge_sort(start, mid, temp);
+        merge_sort(mid + 1, end, temp);
 
-        int i = start, j = end, k = *counter;
+        // i is the current index in the left side of the array and j on the right side, k is the index in the temp array
+        int i = start, j = mid + 1, k = i;
         while (i <= mid && j <= end)
         {
-            if (preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner] < preferences[pairs[mid].winner][pairs[mid].loser] - preferences[pairs[mid].loser][pairs[mid].winner])
+            // If the current pair on the right side of the array has a bigger or equal vote difference between it's candidates than the current left one temp[k] gets it
+            if (preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner] > preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner])
             {
-                pairs[k].winner = preferences[pairs[i].winner][pairs[i].loser];
-                pairs[k].loser = preferences[pairs[i].loser][pairs[i].winner];
-                k++, i++;
+                temp[k] = pairs[i];
+                i++, k++;
             }
             else
             {
-                pairs[k].winner = preferences[pairs[mid].winner][pairs[mid].loser];
-                pairs[k].loser = preferences[pairs[mid].loser][pairs[mid].winner];
-                k++, j++;
+                temp[k] = pairs[j];
+                j++, k++;
             }
+        }
 
-            for (; i <= mid; i++, k++)
-            {
-                pairs[k].winner = preferences[pairs[i].winner][pairs[i].loser];
-                pairs[k].loser = preferences[pairs[i].loser][pairs[i].winner];
-            }
-            for (; j <= end; j++, k++)
-            {
-                pairs[k].winner = preferences[pairs[mid].winner][pairs[mid].loser];
-                pairs[k].loser = preferences[pairs[mid].loser][pairs[mid].winner];
-            }
+        //If there are remaining pairs in either of the sides, they're atribuitted to temp[k]
+        for (; i <= mid; i++, k++)
+        {
+            temp[k] = pairs[i];
+        }
+
+        for (; j <= end; j++, k++)
+        {
+            temp[k] = pairs[j];
+        }
+
+        // copy sorted array into original pair
+        for (k = start; k <= end; k++)
+        {
+            pairs[k] = temp[k];
         }
     }
 }
 
 // Sort pairs in decreasing order by strength of victory
+// There is one function for merge sort and one for selection sort
+// Comment one of the sort functions and alter the bellow function accordingly for the code to work
 void sort_pairs(void)
 {
-    int *counter = malloc(sizeof(int));
-    merge_sort(1, pair_count, counter);
+    pair temp[pair_count];
+    merge_sort(0, pair_count - 1, temp);
     return;
 }
 
