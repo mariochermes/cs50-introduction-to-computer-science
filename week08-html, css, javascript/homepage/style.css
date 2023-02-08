@@ -2,9 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Gabriela&family=Martel&display=swap');
 
-/*
- * Globals
- */
+
 :root {
   /* Colors */
   --cor1: #ffe600;
@@ -20,11 +18,13 @@
  * Base structure
  */
 body {
+  margin: 0;
+  padding: 0;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
   color: var(--cor1);
   font-family: var(--stylized-font);
-  background: url("assets/images/background.gif") no-repeat;
+  background: url("assets/images/background.gif") no-repeat fixed;
   background-size: cover;
 }
 
@@ -33,12 +33,12 @@ body {
 }
 
 .background-shadow {
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5) no-repeat fixed;
   box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.5);
 }
 
 /*
- * Header
+ * Headers
  */
 .nav-masthead .nav-link {
   padding: .25rem 0;
@@ -63,7 +63,7 @@ body {
 }
 
 /*
- * Main
+ * Mains
  */
 .text-link {
   color: var(--cor3);
@@ -78,5 +78,62 @@ body {
 .iframe-map-style {
   border-radius: 5px;
   border: 3px ridge var(--cor2);
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.timeline-container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+}
+
+.text-box {
+  padding: 20px 30px;
+  background: url(assets/images/scroll.png) no-repeat 50% 15%;
+  background-size: cover;
+  border-radius: 6px;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background-color: var(--cor1);
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+}
+
+.left-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #B3875C;
+  right: 21px;
+}
+
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #B3875C;
+  left: 21px;
 }
