@@ -9,7 +9,7 @@
   /* Colors */
   --cor1: #ffe600;
   --cor2: #a5960b;
-  --cor3: #FF880D;
+  --cor3: #ff880d;
 
   /* Fonts */
   --default-font: 'Times New Roman', Georgia, serif;
@@ -65,7 +65,6 @@ body {
 /*
  * Main
  */
- 
 .text-link {
   color: var(--cor3);
   text-decoration: none;
@@ -76,4 +75,8 @@ body {
   text-decoration: underline;
 }
 
-
+.iframe-map-style {
+  border-radius: 5px;
+  border: 3px ridge var(--cor2);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);;
+}
