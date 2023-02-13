@@ -21,7 +21,6 @@ body {
   margin: 0;
   padding: 0;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
   color: var(--cor1);
   font-family: var(--stylized-font);
   background: url("assets/images/background.gif") no-repeat fixed;
@@ -96,12 +95,16 @@ body {
 }
 
 .text-box {
-  padding: 20px 40px;
+  padding: 50px 100px 20px;
   color: #9f0c12;
   background: url("assets/images/scroll.png") no-repeat 50% 16%;
   background-size: cover;
-  width: 40%;
+  width: 45%;
   position: relative;
+}
+
+.text-box h3 {
+  margin-bottom: 20px;
 }
 
 .timeline::after {
@@ -109,35 +112,71 @@ body {
   position: absolute;
   width: 6px;
   height: 100%;
-  border: 5px solid var(--cor1);
+  border: 6px solid var(--cor1);
   border-image: url("assets/images/border2.png");
   border-image-slice: 25;
   border-image-repeat: repeat;
   top: 0;
-  left:50%;
-  margin-left: -3px;
+  left: 50%;
+  margin-left: -5px;
 }
 
 .left-container-arrow {
   height: 0;
   width: 0;
   position: absolute;
-  top: 28px;
+  top: 60px;
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-left: 15px solid #B88D61;
-  right: 18px;
+  right: 22px;
 }
 
 .right-container-arrow {
   height: 0;
   width: 0;
   position: absolute;
-  top: 28px;
+  top: 60px;
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-right: 15px solid #B88D61;
-  left: 18px;
+  left: 22px;
+}
+
+.time-left {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100px;
+  top: 50px;
+  right: -106px;
+  border: 1px solid #B88D61;
+  background: #4e2208 url("assets/images/scroll-texture.jpg");
+  background-size: cover;
+  color: #9f0c12;
+  border-radius: 50%;
+  z-index: 10;
+  font-size: 1.2em;
+}
+
+.time-right {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100px;
+  top: 50px;
+  left: -106px;
+  border: 1px solid #B88D61;
+  background: #4e2208 url("assets/images/scroll-texture.jpg");
+  background-size: cover;
+  color: #9f0c12;
+  border-radius: 50%;
+  z-index: 10;
+  font-size: 1.2em;
 }
