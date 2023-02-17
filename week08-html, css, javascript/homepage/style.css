@@ -25,9 +25,9 @@
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html, body {
@@ -36,25 +36,26 @@ html, body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  font-family: var(--stylized-font);
-  color: var(--cor1);
   background: url("assets/images/background.gif") no-repeat fixed center center;
   background-size: cover;
+  color: var(--cor1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--stylized-font);
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 }
 
 header {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-  margin: 0px auto 50px;
-  padding: 1rem;
   background: rgba(0, 0, 0, 0.5) no-repeat fixed;
   box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.5);
+  margin: 0px auto 2%;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 nav {
@@ -62,11 +63,11 @@ nav {
 }
 
 nav .nav-link {
-  padding: .25rem 0;
-  margin: 0 1rem;
-  font-weight: 700;
-  color: var(--cor2);
   border-bottom: .25rem solid transparent;
+  color: var(--cor2);
+  font-weight: 700;
+  margin: 0 1rem;
+  padding: .25rem 0;
 }
 
 nav .nav-link:hover,
@@ -76,28 +77,29 @@ nav .nav-link:focus {
 }
 
 nav .active {
-  color: var(--cor1);
   border-bottom-color: var(--cor1);
+  color: var(--cor1);
 }
 
 nav .active:hover {
-  color: var(--cor1);
   border-bottom-color: var(--cor1);
+  color: var(--cor1);
 }
 
 main {
+  align-items: center;
   display: flex;
   flex-direction: column;
+  flex: auto;
   justify-content: center;
-  align-items: center;
 }
 
 footer {
-  width: 100%;
-  margin: 50px auto 0;
-  padding: 1rem;
   background: rgba(0, 0, 0, 0.5) no-repeat fixed;
   box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.5);
+  margin: 2% auto 0;
+  padding: 0.5rem;
+  width: 100%;
 }
 
 .base-width {
@@ -123,9 +125,12 @@ footer {
 Home
 */
 .cover-container {
-  height: 100%;
-  margin: auto;
-  padding: 7vw 2vw;
+  padding: 4% 2% 2%;
+}
+
+.tr-logo {
+  max-height: auto;
+  max-width: 100%;
 }
 
 /*
@@ -145,12 +150,11 @@ Map
 /*
 Timeline
 */
-
 .timeline-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
 .timeline {
@@ -165,44 +169,44 @@ Timeline
 }
 
 .year {
-  display: flex;
   background: linear-gradient(to right, transparent 45%, var(--cor2) 45%, var(--cor2) 45%, transparent 50%);
+  display: flex;
+  flex-basis: 100px;
   order: 2;
   text-align: center;
-  flex-basis: 100px;
+  
 }
 
 .year > span {
-  margin: auto;
-  border: 4px solid var(--cor4);
   background: url("assets/images/scroll-texture.jpg");
   background-size: cover;
-  color: #9f0c12;
+  border: 4px solid var(--cor4);
   border-radius: 50px;
+  color: var(--cor5);
   font-size: 1.1rem;
-  width: 90px;
   height: 50px;
   line-height: 40px;
+  margin: auto;
+  width: 90px;
 }
 
 .info {
-  text-align: center;
-  padding: 5% 6% 2%;
-  margin-bottom: 3%;
-  border-radius: 5px;
-  font-size: calc(0.8rem + 0.4vw);
-  color: var(--cor5);
-  order: 3;
-  width: 40%;
-  background: #fff;
   background: url("assets/images/scroll.png") no-repeat 50% 20%;
   background-size: cover;
+  border-radius: 5px;
+  color: var(--cor5);
+  font-size: calc(0.8rem + 0.4vw);
+  margin-bottom: 3%;
+  order: 3;
+  padding: 5% 6% 2%;
+  width: 40%;
+  text-align: center;
   transition: all .6s ease;
 }
 
 .info h3 {
-  margin-bottom: 2%;
   font-size: calc(1.2rem + 0.8vw);
+  margin-bottom: 2%;
 }
 
 .info p {
@@ -220,7 +224,6 @@ Timeline
 /*
 Deities
 */
-
 .table {
   border-color: var(--cor2);
   color: var(--cor2);
@@ -236,7 +239,7 @@ td, th {
 
 
 /*
-
+Media queries
 */
 @media (max-width: 992px) {
   .info {
@@ -266,6 +269,10 @@ td, th {
 }
 
 @media (max-width: 450px) {
+  .lead {
+    font-size: calc(1rem + 0.2vw);
+  }
+
   .info {
     font-size: calc(0.7rem + 0.1vw);
     line-height: calc(0.9rem + 0.1vw);
@@ -277,15 +284,15 @@ td, th {
 
   .year > span {
     font-size: 0.9rem;
-    width: 80px;
     height: fit-content;
+    width: 80px;
   }
 }
 
 @media (max-width:320px) {
   .info {
-    padding: 10% 5%;
-    margin-right: 5px;
     background-size: auto;
+    margin-right: 5px;
+    padding: 10% 5%;
   }
 }
