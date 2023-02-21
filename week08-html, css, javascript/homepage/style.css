@@ -10,6 +10,7 @@
   --cor3: #ff880d;
   --cor4: #B88D61;
   --cor5: #9f0c12;
+  --cor6: #a5960b38;
 
   /* Fonts */
   --default-font: 'Times New Roman', Georgia, serif;
@@ -230,13 +231,54 @@ Deities
 }
 
 tr:hover {
-  background-color: #a5960b38;
+  background-color: var(--cor6);
 }
 
 td, th {
   color: var(--cor1);
 }
 
+/*
+Deities2
+*/
+
+.slide  {
+  padding: 2%;
+}
+
+.slide p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide span {
+  border-radius: 10%;
+  display: inline-block;
+  padding: 2%;
+}
+
+.slide span:hover {
+  background-color: var(--cor6);
+  cursor: pointer;
+  color: var(--cor1);
+  text-decoration: none;
+}
+
+.slide button {
+  background: transparent url("assets/images/left-arrow.png") no-repeat;
+  background-size: 100% 100%;
+  border: 0;
+  color: var(--cor2);
+  height: 2.5rem;
+  padding: 10px;
+  text-decoration: none;
+  width: 2.5rem;
+}
+
+.slide .next {
+  background: transparent url("assets/images/right-arrow.png") no-repeat;
+  background-size: 100% 100%;
+}
 
 /*
 Media queries
