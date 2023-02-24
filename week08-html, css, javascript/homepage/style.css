@@ -225,25 +225,51 @@ Timeline
 /*
 Deities
 */
-.table {
-  border-color: var(--cor2);
-  color: var(--cor2);
+
+.slide {
+  display: none;
+  padding: 1% 2%;
 }
 
-tr:hover {
-  background-color: var(--cor6);
+.slide .active {
+  display: block;
 }
 
-td, th {
-  color: var(--cor1);
+.slide img {
+  max-height: auto;
+  max-width: 100%;
 }
 
-/*
-Deities2
-*/
+.indicators-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
 
-.slide  {
-  padding: 2%;
+.indicator {
+  background-color: var(--cor2);
+  background-clip: padding-box;
+  border: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  height: 3px;
+  margin: 0 3px;
+  padding: 0;
+  width: 30px;
+}
+
+.indicators-container .active {
+  background-color: var(--cor1);
+}
+
+.slide h1 {
+  font-size: calc(1.375rem + 1vw);
 }
 
 .slide p {
@@ -251,31 +277,42 @@ Deities2
   margin-bottom: 0.5rem;
 }
 
-.slide span {
+.prev-button-container, .next-button-container {
   border-radius: 10%;
+  bottom: 60%;
   display: inline-block;
-  padding: 2%;
+  margin-bottom: -50px;
+  padding: 1%;
+  position: relative;
+  z-index: 1;
 }
 
-.slide span:hover {
+.prev-button-container {
+  right: 40%;
+}
+
+.next-button-container {
+  left: 40%;
+}
+
+.prev-button-container:hover, .next-button-container:hover {
   background-color: var(--cor6);
   cursor: pointer;
-  color: var(--cor1);
   text-decoration: none;
 }
 
-.slide button {
+.prev-button, .next-button {
   background: transparent url("assets/images/left-arrow.png") no-repeat;
   background-size: 100% 100%;
   border: 0;
   color: var(--cor2);
-  height: 2.5rem;
+  height: 2rem;
   padding: 10px;
   text-decoration: none;
-  width: 2.5rem;
+  width: 2rem;
 }
 
-.slide .next {
+.next-button {
   background: transparent url("assets/images/right-arrow.png") no-repeat;
   background-size: 100% 100%;
 }
