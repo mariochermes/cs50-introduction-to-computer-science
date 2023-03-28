@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+
+            $(document).ready(function() {
+                // Edit button click event
+                $('.table').on('click', '.edit-btn', function() {
+                    // Get the row of the clicked button
+                    var row = $(this).closest('tr');
+                    // Get the name and birthday from the row
+                    var name = row.find('.name').text();
+                    var birthday = row.find('.birthday').text().split('/');
+
+                    // Replace the name and birthday cells with input fields
+                    row.find('.name').html('<input type="text" name="name" value="' + name + '">');
+                    row.find('.birthday').html('<input type="text" name="day" value="' + birthday[0] + '">/<input type="text" name="month" value="' + birthday[1] + '">');
+
+                    // Replace the edit button with a save button
+                    row.find('.edit-btn').replaceWith('<button class="save-btn">Save</button>');
+                });
+
+                // Save button click event
+                $('.table').on('click', '.save-btn', function() {
+                    // Get the row of the clicked button
+                    var row = $(this).closest('tr');
+                    // Get the name and birthday from the input fields
+                    var name = row.find('input[name="name"]').val();
+                    var day = row.find('input[name="day"]').val();
+                    var month = row.find('input[name="month"]').val();
+
+                    // Make an AJAX call to update the birthday in the database
+                    $.ajax({
+                    url: '/edit-birthday',
+                    type: 'POST',
+                    data: {
+                        'name': name,
+                        'day': day,
+                        'month': month
+                    },
+                    success: function(response) {
+                        // Replace the input fields with the updated name and birthday
+                        row.find('.name').text(name);
+                        row.find('.birthday').text(day + '/' + month);
+
+                        // Replace the save button with an edit button
+                        row.find('.save-btn').replaceWith('<button class="edit-btn">Edit</button>');
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            });
+
+            // Delete button click event
+            $('.table').on('click', '.delete-btn', function() {
+                    // Get the row of the clicked button
+                    var row = $(this).closest('tr');
+                    // Get the name and birthday from the row
+                    var name = row.find('.name').text();
+
+                    // Make an AJAX call to delete the birthday from the database
+                    $.ajax({
+                    url: '/delete-birthday',
+                    type: 'POST',
+                    data: {
+                        'name': name
+                    },
+                    success: function(response) {
+                        // Remove the row from the table
+                        row.remove();
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                    });
+                });
+            });
+
+          </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Add a Birthday</h2>
+                <form method="post">
+                    <input name="name" placeholder="Name" type="text">
+                    <input name="month" placeholder="Month" type="number" min="1" max="12">
+                    <input name="day" placeholder="Day" type="number" min="1" max="31">
+                    <input value="Add Birthday" type="submit">
+                </form>
+            </div>
+
+            <div class="section">
+                <h2>All Birthdays</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for birthday in birthdays %}
+                            <tr>
+                                <td class="name">{{ birthday["name"] }}</td>
+                                <td class="birthday">{{ birthday["month"] }}/{{ birthday["day"] }}</td>
+                                <td class="row-actions">
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
