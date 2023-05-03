@@ -1,14 +1,14 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 const HomePage = () => {
   return (
-    <Container fluid className="h-100 w-75">
-      <Row className="align-items-center d-flex justify-content-center" style={{ height: "100vh" }}>
-        <Col className="text-center">
-          <img src="" alt="CyberBrain Logo"/>
-          <h1>Welcome to Cyber Brain</h1>
-          <p>A second brain to organize your life.</p>
+    <Container fluid>
+      <Row className="justify-content-center align-items-center" style={{ height: '100vh' }}>
+        <Col md={8} className="text-center">
+          <h1>Welcome to Cyber Brain!</h1>
+          <p>A second brain to help you organize your life.</p>
+          <Button variant="primary">Get Started</Button>
         </Col>
       </Row>
     </Container>
