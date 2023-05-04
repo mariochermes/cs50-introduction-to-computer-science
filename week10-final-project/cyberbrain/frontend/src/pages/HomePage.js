@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Container, Image } from 'react-bootstrap';
-import logo from './images/logo.png';
-import sunIcon from './images/sun-icon.png';
+import logo from '/logo.png';
+import sunIcon from '../../public/sun-icon.png';
 import graphicElement from './images/graphic-element.png';
 
 const HomePage = () => {
