@@ -1,19 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Container, Image } from 'react-bootstrap';
-import logo from '/logo.png';
-import sunIcon from '../../public/sun-icon.png';
-import graphicElement from './images/graphic-element.png';
+import { publicUrl } from '../index';
 
 const HomePage = () => {
   return (
-    <Container className="d-flex flex-column align-items-center justify-content-center h-100">
-      <div className="d-flex justify-content-between w-100 mb-4">
-        <Image src={sunIcon} className="align-self-center" width={30} height={30} />
-        <Image src={logo} className="align-self-center" />
-      </div>
+    <Container className="d-flex flex-column align-items-center justify-content-center h-100" style={{ height: '100vh' }}>
+      <Image src={`${publicUrl}/sunIconDark.png`} className="align-self-end" width={25} height={25} />
+      <Image src={`${publicUrl}/cyberbrainLogo.png`} width={300} height={300}/>
       <h1 className="text-center mb-5">Cyberbrain</h1>
-      <Image src={graphicElement} className="mb-5" />
+      <Image src={`${publicUrl}/cyberElement.png`} className="mb-5" />
       <div className="d-flex justify-content-center w-100">
         <Button variant="primary" className="m-2">
           <Link to="/tasks" className="text-white text-decoration-none">
