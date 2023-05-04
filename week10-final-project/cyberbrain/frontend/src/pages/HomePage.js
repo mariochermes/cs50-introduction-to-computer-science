@@ -14,7 +14,16 @@ const HomePage = () => {
         <Col xs="auto">
           <Image fluid src={`${publicUrl}/cyberbrainLogo.png`} width={350} height={350} />
           <h1 className="my-4">Cyberbrain</h1>
-          <Image src={`${publicUrl}/cyberElement.png`}/>
+          <svg className="cyber-element" width="100%" height="100%">
+            <line x1="50%" y1="0" x2="50%" y2="50%" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <circle cx="50%" cy="50%" r="3" fill="white" />
+            <line x1="50%" y1="50%" x2="25%" y2="75%" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <circle cx="25%" cy="75%" r="3" fill="white" />
+            <line x1="50%" y1="50%" x2="75%" y2="75%" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <circle cx="75%" cy="75%" r="3" fill="white" />
+            <line x1="50%" y1="50%" x2="0" y2="100%" stroke="white" strokeWidth="2" strokeLinecap="round" />
+            <circle cx="0" cy="100%" r="3" fill="white" />
+          </svg>
         </Col>
       </Row>
       <Row className="w-100">
