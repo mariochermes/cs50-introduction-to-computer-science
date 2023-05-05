@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { publicUrl } from '../index';
-import CyberLine from '../components/CyberLine'
+import { SteppedLineTo } from 'react-lineto';
 
 const HomePage = () => {
   return (
@@ -16,26 +16,34 @@ const HomePage = () => {
           <Image fluid src={`${publicUrl}/cyberbrain-logo-512.png`} width={350} height={350} />
           <h1 className="my-3">CyberBrain</h1>
         </Col>
-        <CyberLine start={{ x: 100, y: 100 }} end={{ x: 200, y: 200 }} />
+        <SteppedLineTo from="A" to="B" orientation="v" />
       </Row>
       <Row className="pb-5 w-100">
         <Col xs="auto" className="text-center w-100">
           <Row className="justify-content-evenly">
             <Col xs="auto" className="text-center">
-              <img src={`${publicUrl}/tasks-icon.png`} alt="Tasks Icon" width={64} height={64} />
-              <h5 className="my-3">Tasks</h5>
+              <button style={{ minWidth: '100px'}}>
+                <img src={`${publicUrl}/tasks-icon.png`} alt="Tasks Icon" width={64} height={64} />
+                <h5 className="my-3">Tasks</h5>
+              </button>
             </Col>
             <Col xs="auto" className="text-center">
-              <img src={`${publicUrl}/areas-icon.png`} alt="Areas Icon" width={64} height={64} />
-              <h5 className="my-3">Areas</h5>
+              <button>
+                <img src={`${publicUrl}/areas-icon.png`} alt="Areas Icon" width={64} height={64} />
+                <h5 className="my-3">Areas</h5>
+              </button>
             </Col>
             <Col xs="auto" className="text-center">
-              <img src={`${publicUrl}/resources-icon.png`} alt="Resources Icon" width={64} height={64} />
-              <h5 className="my-3">Resources</h5>
+              <button>
+                <img src={`${publicUrl}/resources-icon.png`} alt="Resources Icon" width={64} height={64} />
+                <h5 className="my-3">Resources</h5>
+              </button>
             </Col>
             <Col xs="auto" className="text-center">
-              <img src={`${publicUrl}/archives-icon.png`} alt="Archives Icon" width={64} height={64} />
-              <h5 className="my-3">Archives</h5>
+              <button>
+                <img src={`${publicUrl}/archives-icon.png`} alt="Archives Icon" width={64} height={64} />
+                <h5 className="my-3">Archives</h5>
+              </button>
             </Col>
           </Row>
         </Col>
