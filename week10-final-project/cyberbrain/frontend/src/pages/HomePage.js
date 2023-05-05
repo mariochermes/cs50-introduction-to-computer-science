@@ -12,14 +12,14 @@ const HomePage = () => {
         </Col>
       </Row>
       <Row className="align-items-center justify-content-center text-center w-100">
-        <Col xs={12} sm={6} lg={4}>
+        <Col xs={8} sm={6} lg={4}>
           <Image fluid src={`${publicUrl}/cyberbrain-logo-512.png`} className="mb-3" maxWidth={350} maxHeight={350} />
           <h1 className="my-3">CyberBrain</h1>
         </Col>
         <SteppedLineTo from="A" to="B" orientation="v" />
       </Row>
       <Row className="pb-5 w-100 h-100">
-        <Col className="text-center w-100" xs={12} sm={8} lg={6}>
+        <Col className="text-center w-100" xs={12} sm={8} lg={4}>
           <Row className="justify-content-evenly">
             <Col xs={6} md={2} className="text-center mb-3">
               <button className="rounded-2 w-100 h-100">
