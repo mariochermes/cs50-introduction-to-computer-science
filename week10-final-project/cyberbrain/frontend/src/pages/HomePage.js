@@ -13,7 +13,7 @@ const HomePage = () => {
       <Row className="align-items-center justify-content-center text-center w-100">
         <Col xs="auto">
           <Image fluid src={`${publicUrl}/cyberbrainLogo.png`} width={350} height={350} />
-          <h1 className="my-3">Cyberbrain</h1>
+          <h1 className="my-3">CyberBrain</h1>
         </Col>
       </Row>
       <Row className="pb-5 w-100">
