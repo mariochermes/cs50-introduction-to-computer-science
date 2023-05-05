@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { publicUrl } from '../index';
+import CyberLine from '../components/CyberLine'
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
           <Image fluid src={`${publicUrl}/cyberbrain-logo-512.png`} width={350} height={350} />
           <h1 className="my-3">CyberBrain</h1>
         </Col>
+        <CyberLine start={{ x: 100, y: 100 }} end={{ x: 200, y: 200 }} />
       </Row>
       <Row className="pb-5 w-100">
         <Col xs="auto" className="text-center w-100">
