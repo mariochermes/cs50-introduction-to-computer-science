@@ -18,31 +18,31 @@ const HomePage = () => {
         </Col>
         <SteppedLineTo from="A" to="B" orientation="v" />
       </Row>
-      <Row className="pb-5 w-100">
+      <Row className="pb-5 w-100 h-100">
         <Col xs="auto" className="text-center w-100">
           <Row className="justify-content-evenly">
-            <Col xs="auto" className="text-center">
-              <button style={{ minWidth: '100px'}}>
+            <Col xs={2} className="text-center">
+              <button className=" rounded-2 w-100" style={{ minHeight: '120px' }}>
                 <img src={`${publicUrl}/tasks-icon.png`} alt="Tasks Icon" width={64} height={64} />
-                <h5 className="my-3">Tasks</h5>
+                <h5>Tasks</h5>
               </button>
             </Col>
-            <Col xs="auto" className="text-center">
-              <button>
+            <Col xs={2} className="text-center">
+              <button className=" rounded-2 w-100">
                 <img src={`${publicUrl}/areas-icon.png`} alt="Areas Icon" width={64} height={64} />
-                <h5 className="my-3">Areas</h5>
+                <h5>Areas</h5>
               </button>
             </Col>
-            <Col xs="auto" className="text-center">
-              <button>
+            <Col xs={2} className="text-center">
+              <button className=" rounded-2 w-100">
                 <img src={`${publicUrl}/resources-icon.png`} alt="Resources Icon" width={64} height={64} />
-                <h5 className="my-3">Resources</h5>
+                <h5>Resources</h5>
               </button>
             </Col>
-            <Col xs="auto" className="text-center">
-              <button>
+            <Col xs={2} className="text-center">
+              <button className=" rounded-2 w-100">
                 <img src={`${publicUrl}/archives-icon.png`} alt="Archives Icon" width={64} height={64} />
-                <h5 className="my-3">Archives</h5>
+                <h5>Archives</h5>
               </button>
             </Col>
           </Row>
