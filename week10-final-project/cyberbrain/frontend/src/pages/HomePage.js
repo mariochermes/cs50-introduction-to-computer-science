@@ -7,12 +7,12 @@ const HomePage = () => {
     <Container className="align-items-center d-flex flex-column justify-content-between h-100 min-vh-100 py-5" maxWidth={1200}>
       <Row className="justify-content-end w-100">
         <Col xs="auto">
-        <Image src={`${publicUrl}/sunIconDark.png`} className="align-self-end" width={30} height={30} />
+        <Image src={`${publicUrl}/sun-icon-dark.png`} className="align-self-end" width={30} height={30} />
         </Col>
       </Row>
       <Row className="align-items-center justify-content-center text-center w-100">
         <Col xs="auto">
-          <Image fluid src={`${publicUrl}/cyberbrainLogo.png`} width={350} height={350} />
+          <Image fluid src={`${publicUrl}/cyberbrain-logo-512.png`} width={350} height={350} />
           <h1 className="my-3">CyberBrain</h1>
         </Col>
       </Row>
@@ -20,19 +20,19 @@ const HomePage = () => {
         <Col xs="auto" className="text-center w-100">
           <Row className="justify-content-evenly">
             <Col xs="auto" className="text-center">
-              <img src={`${publicUrl}/tasksIcon.png`} alt="Tasks Icon" width={64} height={64} />
+              <img src={`${publicUrl}/tasks-icon.png`} alt="Tasks Icon" width={64} height={64} />
               <h5 className="my-3">Tasks</h5>
             </Col>
             <Col xs="auto" className="text-center">
-              <img src={`${publicUrl}/areasIcon.png`} alt="Areas Icon" width={64} height={64} />
+              <img src={`${publicUrl}/areas-icon.png`} alt="Areas Icon" width={64} height={64} />
               <h5 className="my-3">Areas</h5>
             </Col>
             <Col xs="auto" className="text-center">
-              <img src={`${publicUrl}/resourcesIcon.png`} alt="Resources Icon" width={64} height={64} />
+              <img src={`${publicUrl}/resources-icon.png`} alt="Resources Icon" width={64} height={64} />
               <h5 className="my-3">Resources</h5>
             </Col>
             <Col xs="auto" className="text-center">
-              <img src={`${publicUrl}/archivesIcon.png`} alt="Archives Icon" width={64} height={64} />
+              <img src={`${publicUrl}/archives-icon.png`} alt="Archives Icon" width={64} height={64} />
               <h5 className="my-3">Archives</h5>
             </Col>
           </Row>
