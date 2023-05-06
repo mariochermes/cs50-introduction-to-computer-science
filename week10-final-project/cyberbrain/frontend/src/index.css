@@ -1,3 +1,21 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+:root {
+  /* Colors */
+  --cor1: #191919;
+  --cor2: #B7B7B7;
+  --cor3: #2F2F2F;
+  --cor4: #FFFFFF;
+  --cor5: #9f0c12;
+  --cor6: #a5960b38;
+  --cor7: #a5960b6b;
+
+  /* Fonts */
+  --default-font: 'Source Code Pro', monospace;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,17 +28,21 @@ html, body {
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--cor4);
+  font-family: var(--default-font);
+  margin: 0;
+  padding: 0;  
 }
 
 h1 {
   font-size: 2.5rem;
+}
+
+img {
+  max-height: auto;
+  max-width: 100%;
 }
 
 
