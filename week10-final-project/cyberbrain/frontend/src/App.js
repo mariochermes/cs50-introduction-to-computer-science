@@ -1,5 +1,6 @@
 import { BrowserRouter , Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import OffCanvasDrawer from './components/OffCanvasDrawer'
 import './App.css';
 
 export default function App() {
@@ -7,7 +8,7 @@ export default function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<OffCanvasDrawer />} />
         </Routes>
       </BrowserRouter>
     </>

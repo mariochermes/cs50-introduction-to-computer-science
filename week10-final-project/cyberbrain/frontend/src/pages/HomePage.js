@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { publicUrl } from '../index';
+import OffCanvasDrawer from '../components/OffCanvasDrawer';
 import { SteppedLineTo } from 'react-lineto';
 
-const HomePage = () => {
+export default function HomePage() {
   return (
     <Container className="align-items-center d-flex flex-column justify-content-between h-100 min-vh-100 py-5" maxWidth={1200}>
       <Row className="justify-content-end w-100">
@@ -51,5 +52,3 @@ const HomePage = () => {
     </Container>
   );
 };
-
-export default HomePage;
