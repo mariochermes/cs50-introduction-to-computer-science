@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { publicUrl } from '../index';
-import OffCanvasDrawer from '../components/OffCanvasDrawer';
+import OffCanvasDrawer from '../components/NavigationBar';
 import { SteppedLineTo } from 'react-lineto';
 
 export default function HomePage() {
