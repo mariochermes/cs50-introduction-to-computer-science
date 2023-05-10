@@ -1,6 +1,12 @@
+import { useState } from 'react';
 import { Button, Container, Form, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap';
+import { publicUrl } from '../index';
 
 export default function OffCanvasDrawer() {
+  const [darkMode, setDarkMode] = useState(true);
+
+
+
   return (
     <>
       <Navbar bg="light" expand={false} className="mb-3">
@@ -42,6 +48,11 @@ export default function OffCanvasDrawer() {
               </Form>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+          >
+            <img src={`${publicUrl}/sun-icon-dark.png`} alt="sun icon" className="align-self-end" width={28} height={28} />
+          </button>
         </Container>
       </Navbar>
     </>
