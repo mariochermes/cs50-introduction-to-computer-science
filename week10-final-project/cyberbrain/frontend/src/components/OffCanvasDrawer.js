@@ -5,16 +5,15 @@ export default function OffCanvasDrawer() {
     <>
       <Navbar bg="light" expand={false} className="mb-3">
         <Container fluid>
-          <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
           <Navbar.Offcanvas
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
-            placement="end"
+            placement="start"
           >
-            <Offcanvas.Header closeButton>
+            <Offcanvas.Header>
               <Offcanvas.Title id="offcanvasNavbarLabel">
-                Offcanvas
+                CyberBrain
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
