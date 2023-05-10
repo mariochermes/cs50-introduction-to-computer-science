@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Container, Form, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap';
+import { Button, Container, Image, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import { publicUrl } from '../index';
 
 export default function NavigationBar() {
@@ -17,16 +17,33 @@ export default function NavigationBar() {
         >
           <Container fluid className="d-flex flex-column h-100">
             <Offcanvas.Header>
-              <Offcanvas.Title id="offcanvasNavbarLabel">
-                CyberBrain
+              <Offcanvas.Title className="flex-grow-1" id="offcanvasNavbarLabel">
+                <Nav>
+                  <Nav.Link className="align-items-center d-flex justify-content-between" href="#tasks">
+                    Cyberbrain
+                    <Image src={`${publicUrl}/cyberbrain-icon.png`} width={60}></Image>
+                  </Nav.Link>
+                </Nav>
               </Offcanvas.Title>
             </Offcanvas.Header>
-            <Offcanvas.Body fluid className="d-flex flex-column justify-content-center">
+            <Offcanvas.Body className="d-flex flex-column justify-content-center">
               <Nav>
-                <Nav.Link href="#tasks">Tasks</Nav.Link>
-                <Nav.Link href="#areas">Areas</Nav.Link>
-                <Nav.Link href="#resources">Resources</Nav.Link>
-                <Nav.Link href="#archives">Archives</Nav.Link>
+                <Nav.Link className="d-flex justify-content-between" href="#tasks">
+                  Tasks
+                  <Image src={`${publicUrl}/tasks-icon.png`} width={28}></Image>
+                </Nav.Link>
+                <Nav.Link className="d-flex justify-content-between" href="#areas">
+                  Areas
+                  <Image src={`${publicUrl}/areas-icon.png`} width={28}></Image>
+                </Nav.Link>
+                <Nav.Link className="d-flex justify-content-between" href="#resources">
+                  Resources
+                  <Image src={`${publicUrl}/resources-icon.png`} width={28}></Image>
+                </Nav.Link>
+                <Nav.Link className="d-flex justify-content-between" href="#tasks">
+                  Archives
+                  <Image src={`${publicUrl}/archives-icon.png`} width={28}></Image>
+                </Nav.Link>
               </Nav>
             </Offcanvas.Body>
             <Container className="mt-auto p-3">
