@@ -15,23 +15,19 @@ export default function NavigationBar() {
           placement="start"
         >
           <Container fluid className="d-flex flex-column justify-content-between h-100">
-            <Container className="p-0">
-              <Offcanvas.Header>
-                <Offcanvas.Title id="offcanvasNavbarLabel">
-                  CyberBrain
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-            </Container>
-            <Container className="p-0">
-              <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#tasks">Tasks</Nav.Link>
-                  <Nav.Link href="#areas">Areas</Nav.Link>
-                  <Nav.Link href="#resources">Resources</Nav.Link>
-                  <Nav.Link href="#archives">Archives</Nav.Link>
-                </Nav>
-              </Offcanvas.Body>
-            </Container>
+            <Offcanvas.Header>
+              <Offcanvas.Title id="offcanvasNavbarLabel">
+                CyberBrain
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body fluid>
+              <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav.Link href="#tasks">Tasks</Nav.Link>
+                <Nav.Link href="#areas">Areas</Nav.Link>
+                <Nav.Link href="#resources">Resources</Nav.Link>
+                <Nav.Link href="#archives">Archives</Nav.Link>
+              </Nav>
+            </Offcanvas.Body>
           </Container>
         </Navbar.Offcanvas>
         <Button
