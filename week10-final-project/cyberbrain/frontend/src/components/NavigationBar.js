@@ -40,7 +40,7 @@ export default function NavigationBar() {
                   Resources
                   <Image src={`${publicUrl}/resources-icon.png`} width={28}></Image>
                 </Nav.Link>
-                <Nav.Link className="d-flex justify-content-between" href="#tasks">
+                <Nav.Link className="d-flex justify-content-between" href="#archives">
                   Archives
                   <Image src={`${publicUrl}/archives-icon.png`} width={28}></Image>
                 </Nav.Link>
@@ -49,16 +49,19 @@ export default function NavigationBar() {
             <Container className="mt-auto p-3">
               <Nav>
                 {isLoggedIn ? (
-                  <Nav.Link>
-                    Log out
+                  <Nav.Link className="d-flex justify-content-between" href="#Logout">
+                    Logout
+                    <Image src={`${publicUrl}/logout-icon.png`} width={28}></Image>
                   </Nav.Link>
                 ) : (
                   <>
-                    <Nav.Link>
-                      Log in
+                    <Nav.Link className="d-flex justify-content-between" href="#login">
+                      Login
+                      <Image src={`${publicUrl}/login-icon.png`} width={28}></Image>
                     </Nav.Link>
-                    <Nav.Link>
+                    <Nav.Link className="d-flex justify-content-between" href="#sign-up">
                       Sign Up
+                      <Image src={`${publicUrl}/sign-up-icon.png`} width={28}></Image>
                     </Nav.Link>
                   </>
                 )}
