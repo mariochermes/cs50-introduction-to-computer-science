@@ -8,7 +8,7 @@ export default function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<OffCanvasDrawer />} />
+          <Route path="/" element={<HomePage />} />
         </Routes>
       </BrowserRouter>
     </>
