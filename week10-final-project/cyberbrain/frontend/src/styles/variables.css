@@ -1,0 +1,12 @@
+:root {
+    /* Colors */
+    --color1: #191919;
+    --color2: #B7B7B7;
+    --color3: #2F2F2F;
+    --color4: #1B1E1F;
+    --color5: #181A1B;
+    --color6: #FFFFFF;
+    
+    /* Fonts */
+    --default-font: 'Source Code Pro', monospace;
+  }
