@@ -20,28 +20,28 @@ export default function HomePage() {
         <Col className="text-center w-100" xs={12} lg={4}>
           <Row className="justify-content-evenly">
             <Col xs={6} md={3} lg={2} className="text-center mb-3">
-              <button className="tasks-page-button align-items-center d-flex flex-column h-100 justify-content-center pt-2 rounded-2 w-100" style={{ minHeight:'120px' }}>
+              <Button className="tasks-page-button align-items-center d-flex flex-column h-100 justify-content-center pt-2 rounded-2 w-100" style={{ minHeight:'120px' }}>
                 <Image src={`${publicUrl}/tasks-icon.png`} alt="Tasks Icon" width={60} height={60} />
                 <h5 className="mt-auto">Tasks</h5>
-              </button>
+              </Button>
             </Col>
             <Col xs={6} md={3} lg={2} className="text-center mb-3">
-              <button className="tasks-page-button align-items-center d-flex flex-column h-100 justify-content-center pt-2 rounded-2 w-100" style={{ minHeight:'120px' }}>
+              <Button className="tasks-page-button align-items-center d-flex flex-column h-100 justify-content-center pt-2 rounded-2 w-100" style={{ minHeight:'120px' }}>
                 <Image src={`${publicUrl}/areas-icon.png`} alt="Areas Icon" width={60} height={60} />
                 <h5 className="mt-auto">Areas</h5>
-              </button>
+              </Button>
             </Col>
             <Col xs={6} md={3} lg={2} className="text-center mb-3">
-              <button className="tasks-page-button align-items-center d-flex flex-column h-100 justify-content-center pt-2 rounded-2 w-100" style={{ minHeight:'120px' }}>
+              <Button className="tasks-page-button align-items-center d-flex flex-column h-100 justify-content-center pt-2 rounded-2 w-100" style={{ minHeight:'120px' }}>
                 <Image src={`${publicUrl}/resources-icon.png`} alt="Resources Icon" width={60} height={60} />
                 <h5 className="mt-auto">Resources</h5>
-              </button>
+              </Button>
             </Col>
             <Col xs={6} md={3} lg={2} className="text-center mb-3">
-              <button className="tasks-page-button align-items-center d-flex flex-column h-100 justify-content-center pt-2 rounded-2 w-100" style={{ minHeight:'120px' }}>
+              <Button className="tasks-page-button align-items-center d-flex flex-column h-100 justify-content-center pt-2 rounded-2 w-100" style={{ minHeight:'120px' }}>
                 <Image src={`${publicUrl}/archives-icon.png`} alt="Archives Icon" width={60} height={60} />
                 <h5 className="mt-auto">Archives</h5>
-              </button>
+              </Button>
             </Col>
           </Row>
         </Col>
