@@ -1,7 +1,5 @@
-
-
 nav, #offcanvasNavbar {
-    background-color: var(--color4);
+    background-color: var(--color2);
 }
 
 button:active {
