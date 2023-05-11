@@ -6,7 +6,7 @@ import { SteppedLineTo } from 'react-lineto';
 
 export default function HomePage() {
   return (
-    <Container className="align-items-center d-flex flex-column justify-content-between h-100 min-vh-100 py-5" maxWidth={1200}>
+    <Container className="align-items-center d-flex flex-column justify-content-between h-100 py-5" maxWidth={1200}>
       <Row className="justify-content-end w-100">
       </Row>
       <Row className="align-items-center justify-content-center text-center w-100">
