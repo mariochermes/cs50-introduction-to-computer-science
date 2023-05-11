@@ -1,10 +1,6 @@
 @import url("../index.css");
 
-nav {
-    background-color: var(--color4);
-}
-
-#offcanvasNavbar {
+nav, #offcanvasNavbar {
     background-color: var(--color4);
 }
 
