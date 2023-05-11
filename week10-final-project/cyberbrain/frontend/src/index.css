@@ -40,11 +40,6 @@ h1 {
   font-size: 2.5rem;
 }
 
-img {
-  max-height: auto;
-  max-width: 100%;
-}
-
 #root {
   display: flex;
   flex-direction: column;

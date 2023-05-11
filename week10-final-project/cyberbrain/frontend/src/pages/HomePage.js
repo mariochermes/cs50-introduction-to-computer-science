@@ -11,7 +11,7 @@ export default function HomePage() {
       </Row>
       <Row className="align-items-center justify-content-center text-center w-100">
         <Col xs="auto">
-          <img src={`${publicUrl}/cyberbrain-logo-512.png`} alt="CyberBrain logo" width={350}/>
+          <img alt="CyberBrain logo" fluid src={`${publicUrl}/cyberbrain-logo-512.png`} width={350}/>
           <h1 className="page-title">CyberBrain<span class="blink">.</span></h1>
         </Col>
       </Row>
