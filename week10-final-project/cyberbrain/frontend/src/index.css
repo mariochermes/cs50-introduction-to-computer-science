@@ -4,13 +4,12 @@
 
 :root {
   /* Colors */
-  --cor1: #191919;
-  --cor2: #B7B7B7;
-  --cor3: #2F2F2F;
-  --cor4: #FFFFFF;
-  --cor5: #9f0c12;
-  --cor6: #a5960b38;
-  --cor7: #a5960b6b;
+  --color1: #191919;
+  --color2: #B7B7B7;
+  --color3: #2F2F2F;
+  --color4: #1B1E1F;
+  --color5: #181A1B;
+  --color6: #FFFFFF;
   
   /* Fonts */
   --default-font: 'Source Code Pro', monospace;
@@ -30,7 +29,8 @@ html, body {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--cor4);
+  background-color: var(--color1);
+  color: var(--color6);
   font-family: var(--default-font);
   margin: 0;
   padding: 0;  
@@ -43,6 +43,10 @@ h1 {
 img {
   max-height: auto;
   max-width: 100%;
+}
+
+.bg-secondary {
+  background-color: var(--cor3);
 }
 
 .blink {

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button, Container, Image, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import { publicUrl } from '../index';
+import '../styles/off-canvas-drawer.css';
 
 export default function NavigationBar() {
   const [darkMode, setDarkMode] = useState(true);
@@ -9,7 +10,7 @@ export default function NavigationBar() {
   return (
     <>
       <Navbar bg="light" className="mb-3" expand={false} sticky="top">
-        <Navbar.Toggle aria-controls="offcanvasNavbar" className="ms-3" noFocusStyle/>
+        <Navbar.Toggle aria-controls="offcanvasNavbar" className="ms-3"/>
         <Navbar.Offcanvas
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
