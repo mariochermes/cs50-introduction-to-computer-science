@@ -1,4 +1,4 @@
-import { Button, Container, Image, Nav, Navbar, Offcanvas } from 'react-bootstrap';
+import { Button, Image} from 'react-bootstrap';
 import { publicUrl } from '../index';
 import '../styles/page-button.css';
 
