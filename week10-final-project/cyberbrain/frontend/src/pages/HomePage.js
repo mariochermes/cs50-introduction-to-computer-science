@@ -1,7 +1,6 @@
 import React from 'react';
-import { Button, Col, Container, Image, Row } from 'react-bootstrap';
+import {  Col, Container, Image, Row } from 'react-bootstrap';
 import { publicUrl } from '../index';
-import NavigationBar from '../components/NavigationBar';
 import PageButton from '../components/PageButton';
 import { SteppedLineTo } from 'react-lineto';
 
