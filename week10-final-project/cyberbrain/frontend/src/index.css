@@ -40,8 +40,8 @@ img {
   min-height: 100vh;
 }
 
-.bg-secondary {
-  background-color: var(--cor3);
+.row {
+  width: 100%;
 }
 
 .blink {
