@@ -41,7 +41,12 @@ img {
 }
 
 .row {
-  width: 100;
+  margin: 0;
+  width: 100%;
+}
+
+.col {
+  width: 100%;
 }
 
 .blink {
