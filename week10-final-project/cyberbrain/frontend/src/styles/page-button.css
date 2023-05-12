@@ -1,7 +1,7 @@
 @import url("variables.css");
 
 button {
-
+    background-color: var(--color2);
 }
 
 button h5 {
