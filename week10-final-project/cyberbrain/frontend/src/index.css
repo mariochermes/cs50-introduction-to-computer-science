@@ -40,6 +40,10 @@ img {
   min-height: 100vh;
 }
 
+.row {
+  width: 100;
+}
+
 .blink {
   animation: blink 1s steps(1, end) infinite;
 }
