@@ -7,7 +7,9 @@ import { SteppedLineTo } from 'react-lineto';
 
 export default function HomePage() {
   return (
-    <Container className="align-items-center d-flex flex-column flex-grow-1 justify-content-evenly h-100 py-5">
+    <Container className="align-items-center d-flex flex-column flex-grow-1 justify-content-between h-100 py-5">
+      <Row className="w-100">
+      </Row>
       <Row className="align-items-center justify-content-center text-center w-100">
         <Col xs="auto">
           <Image alt="CyberBrain logo" src={`${publicUrl}/cyberbrain-logo-512.png`} width={300}/>
