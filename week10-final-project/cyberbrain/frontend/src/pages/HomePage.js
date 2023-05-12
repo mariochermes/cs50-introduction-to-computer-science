@@ -9,8 +9,8 @@ export default function HomePage() {
     <Container className="align-items-center d-flex flex-column flex-grow-1 justify-content-between h-100 py-5">
       <Row>
       </Row>
-      <Row className="align-items-center justify-content-center text-center w-100">
-        <Col xs="auto">
+      <Row>
+        <Col>
           <Image alt="CyberBrain logo" src={`${publicUrl}/cyberbrain-logo-512.png`} width={300}/>
           <h1 className="mt-4 page-title">CyberBrain<span class="blink">.</span></h1>
         </Col>
