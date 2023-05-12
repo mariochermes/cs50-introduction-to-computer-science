@@ -12,8 +12,8 @@ export default function HomePage() {
       </Row>
       <Row className="align-items-center justify-content-center text-center w-100">
         <Col xs="auto">
-          <Image alt="CyberBrain logo" src={`${publicUrl}/cyberbrain-logo-512.png`} width={350}/>
-          <h1 className="page-title">CyberBrain<span class="blink">.</span></h1>
+          <Image alt="CyberBrain logo" src={`${publicUrl}/cyberbrain-logo-512.png`} width={300}/>
+          <h1 className="mt-4 page-title">CyberBrain<span class="blink">.</span></h1>
         </Col>
       </Row>
       {/* <SteppedLineTo borderColor="#B7B7B7" from="page-title" to="tasks-page-button" orientation="v" fromAnchor="bottom" toAnchor="top" /> */}
