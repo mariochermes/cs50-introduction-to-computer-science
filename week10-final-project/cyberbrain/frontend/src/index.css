@@ -44,6 +44,11 @@ img {
   width: 100%;
 }
 
+col {
+  
+  width: 100%;
+}
+
 .blink {
   animation: blink 1s steps(1, end) infinite;
 }
