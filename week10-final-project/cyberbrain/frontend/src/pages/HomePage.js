@@ -18,7 +18,7 @@ export default function HomePage() {
       </Row>
       {/* <SteppedLineTo borderColor="#B7B7B7" from="page-title" to="tasks-page-button" orientation="v" fromAnchor="bottom" toAnchor="top" /> */}
       <Row className="w-100 h-100">
-        <Col className="text-center w-100" xs={12} lg={4}>
+        <Col className="text-center w-100">
           <Row className="justify-content-evenly">
             <Col xs={6} md={3} lg={2} className="text-center mb-3">
               <PageButton pageName="tasks">
