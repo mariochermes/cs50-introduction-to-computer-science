@@ -284,16 +284,17 @@ Deities
   display: inline-block;
   margin-bottom: -50px;
   padding: 1%;
-  position: relative;
+  position: absolute;
+  top: 38%;
   z-index: 1;
 }
 
 .prev-button-container {
-  right: 40%;
+  right: 95%;
 }
 
 .next-button-container {
-  left: 40%;
+  left: 95%;
 }
 
 .prev-button-container:hover, .next-button-container:hover {
