@@ -13,3 +13,9 @@ button h5 {
     position: relative;
     top: 8%;
 }
+
+@media screen and (max-width: 400px) {
+    .page-icon {
+      width: 40px;
+    }
+  }
