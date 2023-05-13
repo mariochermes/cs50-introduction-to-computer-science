@@ -276,17 +276,18 @@ Deities
 }
 
 .slideshow-container {
-  min-height: 750px;
+  position: relative;
+  min-height: 75%;
 }
 
 .prev-button-container, .next-button-container {
   border-radius: 10%;
-  bottom: 50%;
   display: inline-block;
   margin-bottom: -50px;
   padding: 1%;
   position: relative;
   z-index: 1;
+  transform: translateY(50%);
 }
 
 .prev-button-container {
