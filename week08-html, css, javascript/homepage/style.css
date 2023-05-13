@@ -290,11 +290,11 @@ Deities
 }
 
 .prev-button-container {
-  right: 95%;
+  right: 90%;
 }
 
 .next-button-container {
-  left: 95%;
+  left: 90%;
 }
 
 .prev-button-container:hover, .next-button-container:hover {
