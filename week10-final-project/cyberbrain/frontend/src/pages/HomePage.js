@@ -2,7 +2,7 @@ import React from 'react';
 import {  Col, Container, Image, Row } from 'react-bootstrap';
 import { publicUrl } from '../index';
 import PageButton from '../components/PageButton';
-import { SteppedLineTo } from 'react-lineto';
+//import { SteppedLineTo } from 'react-lineto';
 
 export default function HomePage() {
   return (
