@@ -277,7 +277,6 @@ Deities
 
 .slideshow-container {
   position: relative;
-  min-height: 75%;
 }
 
 .prev-button-container, .next-button-container {
@@ -287,7 +286,6 @@ Deities
   padding: 1%;
   position: relative;
   z-index: 1;
-  transform: translateY(50%);
 }
 
 .prev-button-container {
