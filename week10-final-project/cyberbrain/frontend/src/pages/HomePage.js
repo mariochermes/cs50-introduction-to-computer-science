@@ -12,7 +12,7 @@ export default function HomePage() {
       <Row>
         <Col>
           <Image alt="CyberBrain logo" src={`${publicUrl}/cyberbrain-logo-512.png`} width={300}/>
-          <h1 className="my-4 page-title">CyberBrain<span class="blink">.</span></h1>
+          <h1 className="my-5 page-title">CyberBrain<span class="blink">.</span></h1>
         </Col>
       </Row>
       {/* <SteppedLineTo borderColor="#B7B7B7" from="page-title" to="tasks-page-button" orientation="v" fromAnchor="bottom" toAnchor="top" /> */}
