@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Container, Image, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import { publicUrl } from '../index';
-import '../styles/off-canvas-drawer.css';
+import '../styles/navigation-bar.css';
 
 export default function NavigationBar() {
   const [darkMode, setDarkMode] = useState(true);
