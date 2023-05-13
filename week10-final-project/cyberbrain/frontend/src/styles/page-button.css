@@ -8,9 +8,10 @@ button {
 
 button h5 {
     background-color: var(--color3);
+    margin-top: 4%;
     padding: 3%;
     position: relative;
-    bottom: 0%;
+    top: 8%;
 }
 
 @media screen and (max-width: 400px)  {
