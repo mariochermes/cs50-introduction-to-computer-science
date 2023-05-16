@@ -7,7 +7,7 @@ import PageButton from '../components/PageButton';
 
 export default function HomePage() {
   return (
-    <Container className="align-items-center d-flex flex-column flex-grow-1 justify-content-between h-100 py-5">
+    <Container className="align-items-center d-flex flex-column flex-grow-1 justify-content-between h-100 pt-5">
       <Row>
       </Row>
       <Row>
