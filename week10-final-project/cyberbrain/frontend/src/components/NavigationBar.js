@@ -17,7 +17,7 @@ export default function NavigationBar() {
           placement="start"
         >
           <Container fluid className="d-flex flex-column h-100">
-            <CloseButton aria-label="Close" className=""/>
+            <CloseButton aria-label="Close" className="align-self-end border-0"/>
             <Offcanvas.Header>
               <Offcanvas.Title className="flex-grow-1" id="offcanvasNavbarLabel">
                 <Nav>
