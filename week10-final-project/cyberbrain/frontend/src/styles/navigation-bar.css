@@ -27,6 +27,8 @@ button:active {
 }
 
 .btn-close {
+    
     position: absolute;
     top: 0;
+    right: 0;
 }
