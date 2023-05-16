@@ -7,7 +7,7 @@ import PageButton from '../components/PageButton';
 
 export default function HomePage() {
   return (
-    <Container className="align-items-center d-flex flex-column flex-grow-1 justify-content-between h-100 mt-3 py-5">
+    <Container className="align-items-center d-flex flex-column flex-grow-1 justify-content-between h-100 py-5">
       <Row>
       </Row>
       <Row>
@@ -20,22 +20,22 @@ export default function HomePage() {
       <Row className="w-100 h-100">
         <Col className="text-center w-100">
           <Row className="justify-content-evenly w-100">
-            <Col xs={6} md={3} lg={2} className="text-center mb-3">
+            <Col xs={5} md={3} lg={2} className="text-center mb-3">
               <PageButton pageName="tasks">
 
               </PageButton>
             </Col>
-            <Col xs={6} md={3} lg={2} className="text-center mb-3">
+            <Col xs={5} md={3} lg={2} className="text-center mb-3">
               <PageButton pageName="areas">
 
               </PageButton>
             </Col>
-            <Col xs={6} md={3} lg={2} className="text-center mb-3">
+            <Col xs={5} md={3} lg={2} className="text-center mb-3">
               <PageButton pageName="resources">
 
               </PageButton>
             </Col>
-            <Col xs={6} md={3} lg={2} className="text-center mb-3">
+            <Col xs={5} md={3} lg={2} className="text-center mb-3">
               <PageButton pageName="archives">
 
               </PageButton>
