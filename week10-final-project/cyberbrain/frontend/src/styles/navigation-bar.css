@@ -1,7 +1,7 @@
 @import url("variables.css");
 
 nav, #offcanvasNavbar {
-    background-color: var(--color2);
+    background-color: var(--color4);
 }
 
 button:active {
@@ -9,7 +9,7 @@ button:active {
 }
 
 .navbar-toggler {
-    border: 1px solid var(--color2);
+    border: 1px solid var(--color4);
 }
 
 .navbar-toggler:focus {

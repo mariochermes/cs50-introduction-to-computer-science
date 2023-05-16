@@ -1,14 +1,13 @@
-// Layout.js
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import NavigationBar from './components/NavigationBar';
 
 export default function Layout({ children }) {
   return (
     <>
-      <Header />
+      <header>
+        <NavigationBar></NavigationBar>
+      </header>
       <main>{children}</main>
-      <Footer />
     </>
   );
 };

@@ -19,7 +19,6 @@ body {
   background-color: var(--color1);
   color: var(--color6);
   font-family: var(--default-font);
-  font-size: calc(15px + .390625vw);
   margin: 0;
   padding: 0;  
 }

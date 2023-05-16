@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Container, Image, Nav, Navbar, Offcanvas } from 'react-bootstrap';
+import { Button, Container, CloseButton, Image, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import { publicUrl } from '../index';
 import '../styles/navigation-bar.css';
 
@@ -9,19 +9,20 @@ export default function NavigationBar() {
 
   return (
     <>
-      <Navbar className="mb-3" expand={false} sticky="top">
-        <Navbar.Toggle aria-controls="offcanvasNavbar" className="ms-3"/>
+      <Navbar className="mb-3 px-3" expand={false} sticky="top">
+        <Navbar.Toggle aria-controls="offcanvasNavbar"/>
         <Navbar.Offcanvas
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
           placement="start"
         >
           <Container fluid className="d-flex flex-column h-100">
+            <CloseButton aria-label="Close" className=""/>
             <Offcanvas.Header>
               <Offcanvas.Title className="flex-grow-1" id="offcanvasNavbarLabel">
                 <Nav>
-                  <Nav.Link className="align-items-center d-flex justify-content-between" href="#tasks">
-                    Cyberbrain
+                  <Nav.Link className="align-items-center d-flex justify-content-between" href="#home">
+                    CyberBrain
                     <Image src={`${publicUrl}/cyberbrain-icon.png`} width={42}></Image>
                   </Nav.Link>
                 </Nav>
