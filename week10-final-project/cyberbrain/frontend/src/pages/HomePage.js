@@ -12,7 +12,7 @@ export default function HomePage() {
       </Row>
       <Row>
         <Col>
-          <Image alt="CyberBrain logo" className="logo" src={`${publicUrl}/cyberbrain-logo-512.png`} width={300}/>
+          <Image alt="CyberBrain logo" className="logo" src={`${publicUrl}/cyberbrain-logo-512.png`} width={280}/>
           <h1 className="my-5 page-title">CyberBrain<span class="blink">.</span></h1>
         </Col>
       </Row>
