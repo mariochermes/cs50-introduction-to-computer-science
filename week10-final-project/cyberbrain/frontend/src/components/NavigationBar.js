@@ -22,7 +22,7 @@ export default function NavigationBar() {
                 <Nav>
                   <Nav.Link className="align-items-center d-flex justify-content-between" href="#home">
                     CyberBrain
-                    <Image src={`${publicUrl}/cyberbrain-icon.png`}></Image>
+                    <Image src={`${publicUrl}/cyberbrain-icon.png`} width={42}></Image>
                   </Nav.Link>
                 </Nav>
               </Offcanvas.Title>
