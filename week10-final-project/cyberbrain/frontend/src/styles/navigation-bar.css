@@ -16,6 +16,7 @@ button:active {
 
 .navbar-toggler {
     border: 1px solid var(--color4);
+    height: 15%;
     width: 15%;
 }
 
@@ -26,6 +27,11 @@ button:active {
 .navbar-toggler-icon {
     background-image: url("../../public/navbar-icon.png");
     width: 100%;
+}
+
+.toggle-mode-button {
+    height: 15%;
+    width: 15%;
 }
 
 .btn-close {
