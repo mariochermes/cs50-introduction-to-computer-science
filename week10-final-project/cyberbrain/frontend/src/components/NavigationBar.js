@@ -6,7 +6,6 @@ import '../styles/navigation-bar.css';
 export default function NavigationBar() {
   const [darkMode, setDarkMode] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [showOffcanvas, setShowOffcanvas] = useState(false);
 
   return (
     <>
@@ -18,12 +17,7 @@ export default function NavigationBar() {
           placement="start"
         >
           <Container fluid className="d-flex flex-column h-100">
-            <CloseButton 
-              aria-label="Close" 
-              className="align-self-end border-0 p-1"
-              onClick={() => setShowOffcanvas(false)}  
-            />
-            <Offcanvas.Header>
+            <Offcanvas.Header closeButton>
               <Offcanvas.Title className="flex-grow-1" id="offcanvasNavbarLabel">
                 <Nav>
                   <Nav.Link className="align-items-center d-flex justify-content-between" href="#home">
