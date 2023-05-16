@@ -28,6 +28,7 @@ button:active {
 
 .btn-close {
     background-image: url("../../public/close-icon.png");
+    border: 0;
     position: absolute;
     right: 0;
     top: 0;
