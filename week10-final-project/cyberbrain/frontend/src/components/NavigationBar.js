@@ -9,7 +9,7 @@ export default function NavigationBar() {
 
   return (
     <>
-      <Navbar className="mb-3 px-3" expand={false} sticky="top">
+      <Navbar className="px-3" expand={false} sticky="top">
         <Navbar.Toggle aria-controls="offcanvasNavbar"/>
         <Navbar.Offcanvas
           id="offcanvasNavbar"
