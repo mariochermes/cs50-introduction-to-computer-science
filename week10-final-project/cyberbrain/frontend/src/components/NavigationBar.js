@@ -30,7 +30,7 @@ export default function NavigationBar() {
             </Offcanvas.Header>
             <Offcanvas.Body className="d-flex flex-column justify-content-center">
               <Nav>
-                <Nav.Link className="d-flex justify-content-between" href="#tasks">
+                <Nav.Link className="align-items-center d-flex justify-content-between" href="#tasks">
                   Tasks
                   <Image src={`${publicUrl}/tasks-icon.png`} width={28}></Image>
                 </Nav.Link>
