@@ -15,10 +15,6 @@ button h5 {
     bottom: 0;
 }
 
-.toggle {
-    
-}
-
 @media screen and (max-width: 400px)  {
     .page-icon {
       max-width: 40px;
