@@ -29,8 +29,6 @@ button:active {
 
 .navbar-toggler-icon {
     background-image: url("../../public/navbar-icon.png");
-    background-size: 100%;
-    height: 10%;
 }
 
 .btn-close {
