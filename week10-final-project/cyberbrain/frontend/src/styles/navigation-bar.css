@@ -13,6 +13,12 @@ button span {
     width: 30px !important;
 }
 
+button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
 button:active {
     border: 0;
 }
