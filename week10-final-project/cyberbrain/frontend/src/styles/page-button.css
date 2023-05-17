@@ -15,7 +15,7 @@ button h5 {
     bottom: 0;
 }
 
-@media screen and (max-width: 400px)  {
+@media screen and (max-width: 768px), (max-height: 768px) {
     .page-icon {
       max-width: 40px;
     }
