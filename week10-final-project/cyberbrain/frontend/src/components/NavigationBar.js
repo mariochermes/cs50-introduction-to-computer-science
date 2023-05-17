@@ -20,7 +20,7 @@ export default function NavigationBar() {
             <Offcanvas.Header closeButton>
               <Offcanvas.Title className="flex-grow-1" id="offcanvasNavbarLabel">
                 <Nav>
-                  <Nav.Link className="align-items-center d-flex justify-content-between" href="#home">
+                  <Nav.Link href="#home">
                     CyberBrain
                     <Image src={`${publicUrl}/cyberbrain-icon.png`} width={42}></Image>
                   </Nav.Link>
