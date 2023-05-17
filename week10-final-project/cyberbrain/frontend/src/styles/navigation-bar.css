@@ -60,7 +60,7 @@ button:active {
 
 @media screen and (max-width: 768px), (max-height: 768px) {
     button span {
-        height: 25px !important;
-        width: 25px !important;
+        height: 28px !important;
+        width: 28px !important;
     }
 }
