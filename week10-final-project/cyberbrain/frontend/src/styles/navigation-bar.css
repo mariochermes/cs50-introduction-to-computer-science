@@ -23,14 +23,10 @@ button:active {
     padding: 0.5% 1%;
 }
 
-.navbar-nav a {
+.navbar-nav .nav-link {
     align-items: center;
     display: flex;
     justify-content: space-between;
-}
-
-.nav-link {
-
 }
 
 .navbar-toggler:focus, .btn-close:focus {

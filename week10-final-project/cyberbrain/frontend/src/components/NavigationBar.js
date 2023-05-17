@@ -29,19 +29,19 @@ export default function NavigationBar() {
             </Offcanvas.Header>
             <Offcanvas.Body className="d-flex flex-column justify-content-center">
               <Nav>
-                <Nav.Link className="align-items-center d-flex justify-content-between" href="#tasks">
+                <Nav.Link href="#tasks">
                   Tasks
                   <Image src={`${publicUrl}/tasks-icon.png`} width={28}></Image>
                 </Nav.Link>
-                <Nav.Link className="d-flex justify-content-between" href="#areas">
+                <Nav.Link href="#areas">
                   Areas
                   <Image src={`${publicUrl}/areas-icon.png`} width={28}></Image>
                 </Nav.Link>
-                <Nav.Link className="d-flex justify-content-between" href="#resources">
+                <Nav.Link href="#resources">
                   Resources
                   <Image src={`${publicUrl}/resources-icon.png`} width={28}></Image>
                 </Nav.Link>
-                <Nav.Link className="d-flex justify-content-between" href="#archives">
+                <Nav.Link href="#archives">
                   Archives
                   <Image src={`${publicUrl}/archives-icon.png`} width={28}></Image>
                 </Nav.Link>
