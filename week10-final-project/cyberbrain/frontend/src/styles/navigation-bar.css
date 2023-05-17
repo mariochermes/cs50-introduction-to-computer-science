@@ -23,7 +23,6 @@ button:active {
     padding: 0.25% 1%;
 }
 
-
 .navbar-toggler:focus, .btn-close:focus {
     box-shadow: none;
 }
@@ -36,6 +35,8 @@ button:active {
 .toggle-mode-icon {
     background-image: url("../../public/sun-icon-light.png") center;
     background-size: 100%;
+    height: 1.5em;
+    width: 1.5em;
 }
 
 .btn-close {
