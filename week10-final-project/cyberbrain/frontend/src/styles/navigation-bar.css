@@ -32,7 +32,7 @@ button:active {
 }
 
 .toggle-mode-icon {
-    background-image: url("../../public/sun-icon-dark.png");
+    background: url("../../public/sun-icon-dark.png") no-repeat center;
     background-size: 100%;
     display: inline-block;
     height: 1.5em;
