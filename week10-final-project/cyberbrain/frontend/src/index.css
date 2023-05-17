@@ -24,7 +24,7 @@ main {
 }
 
 h1 {
-  font-size: calc(1.8rem + 0.390625vw);
+  font-size: var(--font-size-large);
 }
 
 h5 {
