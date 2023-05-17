@@ -28,8 +28,7 @@ button:active {
 }
 
 .navbar-toggler-icon {
-    background: url("../../public/navbar-icon.png") center;
-    background-size: 100%;
+    background-image: url("../../public/navbar-icon.png");
 }
 
 .toggle-mode-icon {
