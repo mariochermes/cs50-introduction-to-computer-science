@@ -22,7 +22,7 @@ button:active {
     padding: 0.25% 1%;
 }
 
-button .navbar-toggler-icon {
+button span {
     height: 30px;
     width: 30px;
 }
