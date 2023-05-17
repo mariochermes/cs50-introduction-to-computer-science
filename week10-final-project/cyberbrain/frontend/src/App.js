@@ -10,7 +10,7 @@ export default function App() {
       <BrowserRouter>
         <Layout>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route exact path="/" element={<HomePage />} />
             <Route path="/tasks" element={<TasksPage />} />
           </Routes>
         </Layout>
