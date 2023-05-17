@@ -20,7 +20,7 @@ button:active {
 
 .navbar-toggler {
     border: 1px solid var(--color4);
-    padding: 0.5% 0.5%;
+    padding: 0.25% 0.5%;
 }
 
 .navbar-toggler:focus, .btn-close:focus {
