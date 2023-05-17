@@ -75,7 +75,6 @@ export default function NavigationBar() {
           onClick={() => setDarkMode(!darkMode)}
           variant="outline-transparent"
         >
-          <img src={`${publicUrl}/sun-icon-dark.png`} alt="sun icon" className="align-self-end" width={28} height={28} />
         </Button>
       </Navbar>
     </>

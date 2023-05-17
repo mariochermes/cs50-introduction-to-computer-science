@@ -32,8 +32,13 @@ button:active {
 }
 
 .navbar-toggler-icon {
-    background-image: url("../../public/navbar-icon.png");
-    background-position: center;
+    background: url("../../public/navbar-icon.png") center;
+    background-size: 100%;
+}
+
+.toggle-mode-button {
+    background-image: url("../../public/sun-icon-light.png") center;
+    background-size: 100%;
 }
 
 .btn-close {
