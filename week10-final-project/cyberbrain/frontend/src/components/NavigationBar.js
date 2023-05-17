@@ -20,7 +20,7 @@ export default function NavigationBar() {
             <Offcanvas.Header closeButton>
               <Offcanvas.Title className="flex-grow-1" id="offcanvasNavbarLabel">
                 <Nav>
-                  <Navbar.Brand href="#home">
+                  <Navbar.Brand className="" href="#home">
                     CyberBrain
                     <Image src={`${publicUrl}/cyberbrain-icon.png`} width={42}></Image>
                   </Navbar.Brand>
