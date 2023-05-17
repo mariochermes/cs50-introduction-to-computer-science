@@ -9,8 +9,8 @@ nav button {
 }
 
 button span {
-    height: 24px !important;
-    width: 24px !important;
+    height: 30px !important;
+    width: 30px !important;
 }
 
 button:active {
