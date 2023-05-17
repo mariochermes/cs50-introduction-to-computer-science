@@ -53,7 +53,7 @@ button:active {
 
 @media screen and (max-width: 400px) {
     button span {
-        height: 24px !important;
+        height: 20px !important;
         width: 24px !important;
     }
 }
