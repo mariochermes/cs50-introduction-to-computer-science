@@ -5,7 +5,8 @@ nav, #offcanvasNavbar {
 }
 
 nav button {
-    padding: 0.25% 0.5%;
+    border: 0;
+    padding: 0.25% 0.5% !important;
 }
 
 button:active {
