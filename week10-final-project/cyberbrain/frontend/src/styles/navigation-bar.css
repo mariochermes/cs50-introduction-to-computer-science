@@ -50,3 +50,10 @@ button:active {
     right: 8px;
     top: 8px;
 }
+
+@media screen and (max-width: 400px) {
+    button span {
+        height: 24px !important;
+        width: 24px !important;
+    }
+}
