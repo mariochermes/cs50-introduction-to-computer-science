@@ -9,23 +9,32 @@
   padding: 0;
 }
 
-html, body {
-  
+html, body, #root {
+  height: 100%;
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: var(--color1);
   color: var(--color6);
   font-family: var(--default-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  height: 100%;
-  padding: 0;  
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  
 }
 
 main {
-  height: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
 }
 
 h1 {
@@ -43,12 +52,6 @@ button {
 img {
   max-width: 100%;
   display: block;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 .row {
@@ -79,4 +82,5 @@ img {
     opacity: 1;
   }
 }
+
 
