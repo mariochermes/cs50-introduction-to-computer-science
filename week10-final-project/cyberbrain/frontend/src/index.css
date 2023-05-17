@@ -28,7 +28,7 @@ h1 {
 }
 
 h5 {
-  font-size: calc(1rem + 0.390625vw);
+  font-size: var(--font-size-medium);
 }
 
 button {

@@ -24,13 +24,13 @@ button:active {
 }
 
 .navbar-nav .navbar-brand {
-    font-size: calc(1rem + 0.390625vw);
+    font-size: var(--font-size-medium);
 }
 
 .navbar-nav .nav-link {
     align-items: center;
     display: flex;
-    font-size: calc(0.8rem + 0.390625vw);
+    font-size: var(--font-size-small);
     justify-content: space-between;
 }
 

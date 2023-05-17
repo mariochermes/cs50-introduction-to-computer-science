@@ -8,7 +8,7 @@
     --color6: #FFFFFF;
     
     /* Fonts */
-    --default-font: 'Source Code Pro', monospace;
+    --default-font: "Source Code Pro", monospace;
 
     /* Font-size */
     --font-size-small: calc(0.8rem + 0.390625vw);
