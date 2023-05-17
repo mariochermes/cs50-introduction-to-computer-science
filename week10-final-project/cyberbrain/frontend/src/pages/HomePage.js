@@ -7,7 +7,7 @@ import PageButton from '../components/PageButton';
 
 export default function HomePage() {
   return (
-    <Container className="align-items-center d-flex flex-column justify-content-between h-100 py-5">
+    <Container className="align-items-center d-flex flex-column justify-content-evenly h-100 py-5">
       <Row>
         <Col>
           <Image alt="CyberBrain logo" className="logo" src={`${publicUrl}/cyberbrain-logo-512.png`} width={280}/>
