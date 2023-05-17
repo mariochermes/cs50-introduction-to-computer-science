@@ -9,8 +9,6 @@ export default function HomePage() {
   return (
     <Container className="align-items-center d-flex flex-column justify-content-between h-100 py-5">
       <Row>
-      </Row>
-      <Row>
         <Col>
           <Image alt="CyberBrain logo" className="logo" src={`${publicUrl}/cyberbrain-logo-512.png`} width={280}/>
           <h1 className="my-5 page-title">CyberBrain<span class="blink">.</span></h1>
