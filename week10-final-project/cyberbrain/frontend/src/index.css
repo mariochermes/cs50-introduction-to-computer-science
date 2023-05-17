@@ -10,7 +10,7 @@
 }
 
 html, body {
-  min-height: 100vh;
+  
 }
 
 body {
@@ -48,6 +48,7 @@ img {
 #root {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .row {
