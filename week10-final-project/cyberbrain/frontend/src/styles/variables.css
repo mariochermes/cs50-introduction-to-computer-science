@@ -9,4 +9,7 @@
     
     /* Fonts */
     --default-font: 'Source Code Pro', monospace;
+
+    /* Font-size */
+    --font-size-small: .8rem;
   }
