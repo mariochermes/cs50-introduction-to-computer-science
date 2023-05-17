@@ -19,14 +19,18 @@ button:active {
     border: 0;
 }
 
+.navbar {
+    padding: 0.5% 1%;
+}
+
 .navbar-nav a {
     align-items: center;
     display: flex;
     justify-content: space-between;
 }
 
-.navbar {
-    padding: 0.5% 1%;
+.nav-link {
+
 }
 
 .navbar-toggler:focus, .btn-close:focus {
