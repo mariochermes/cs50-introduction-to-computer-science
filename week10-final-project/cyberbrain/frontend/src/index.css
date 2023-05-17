@@ -28,10 +28,6 @@ body {
   flex-direction: column;
 }
 
-header {
-  
-}
-
 main {
   flex-grow: 1;
   overflow-y: auto;
