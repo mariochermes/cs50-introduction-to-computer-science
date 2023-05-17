@@ -23,7 +23,7 @@ button:active {
 }
 
 .navbar-toggler-icon {
-    background-image: url("../../public/navbar-icon.png");
+    background: url("../../public/navbar-icon.png") auto;
 }
 
 .btn-close {
