@@ -8,6 +8,11 @@ nav button {
     padding: 0.25% 0.5% !important;
 }
 
+button span {
+    height: 30px !important;
+    width: 30px !important;
+}
+
 button:active {
     border: 0;
 }
@@ -20,11 +25,6 @@ button:active {
 
 .navbar {
     padding: 0.25% 1%;
-}
-
-button span {
-    height: 30px;
-    width: 30px;
 }
 
 .navbar-toggler:focus, .btn-close:focus {
