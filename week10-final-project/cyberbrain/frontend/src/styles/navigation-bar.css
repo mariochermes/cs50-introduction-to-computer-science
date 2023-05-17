@@ -24,7 +24,7 @@ button:active {
 }
 
 .navbar-nav .nav-brand {
-    
+    font-size: calc(1rem + 0.390625vw);
 }
 
 .navbar-nav .nav-link {
