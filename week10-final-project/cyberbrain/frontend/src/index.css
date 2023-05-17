@@ -36,6 +36,10 @@ h5 {
   font-size: calc(1rem + 0.390625vw);
 }
 
+button {
+  border: 0 !important;
+}
+
 img {
   max-width: 100%;
   display: block;
