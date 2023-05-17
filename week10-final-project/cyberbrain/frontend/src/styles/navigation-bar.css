@@ -32,7 +32,7 @@ button:active {
     background-size: 100%;
 }
 
-.toggle-mode-button {
+.toggle-mode-icon {
     background-image: url("../../public/sun-icon-light.png") center;
     background-size: 100%;
 }
