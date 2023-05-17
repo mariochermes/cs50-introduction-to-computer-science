@@ -75,6 +75,7 @@ export default function NavigationBar() {
           onClick={() => setDarkMode(!darkMode)}
           variant="outline-transparent"
         >
+          <span className="toggle-mode-icon"></span>
         </Button>
       </Navbar>
     </>
