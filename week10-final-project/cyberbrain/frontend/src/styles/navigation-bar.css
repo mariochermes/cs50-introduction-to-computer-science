@@ -5,7 +5,6 @@ nav, #offcanvasNavbar {
 }
 
 nav button {
-    border: 0;
     padding: 0.25% 0.5% !important;
 }
 
@@ -23,6 +22,11 @@ button:active {
     padding: 0.25% 1%;
 }
 
+button .navbar-toggler-icon {
+    height: 30px;
+    width: 30px;
+}
+
 .navbar-toggler:focus, .btn-close:focus {
     box-shadow: none;
 }
@@ -35,9 +39,7 @@ button:active {
     background: url("../../public/sun-icon-dark.png") no-repeat center;
     background-size: 100%;
     display: inline-block;
-    height: 30px;
     vertical-align: middle;
-    width: 30px;
 }
 
 .btn-close {
