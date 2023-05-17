@@ -18,13 +18,10 @@ body {
   padding: 0;
 }
 
-#root {
 
-  flex-direction: column;
-}
 
 main {
-  height: 100%;
+  min-height: 100%;
   overflow-y: auto;
 }
 
