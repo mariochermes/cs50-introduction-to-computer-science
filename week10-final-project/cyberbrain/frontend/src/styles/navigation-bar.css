@@ -11,6 +11,7 @@ nav button {
 button span {
     height: 30px !important;
     width: 30px !important;
+    line-height: normal;
 }
 
 button:active {
