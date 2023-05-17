@@ -6,12 +6,12 @@ nav, #offcanvasNavbar {
 
 nav button {
     padding: 0.25% 0.5% !important;
+    line-height: normal;
 }
 
 button span {
     height: 30px !important;
     width: 30px !important;
-    line-height: normal;
 }
 
 button:active {
